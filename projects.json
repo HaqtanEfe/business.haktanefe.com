@@ -1,9 +1,29 @@
 {
   "projects": [
-    { "placeId": "12452509832",  "role": "Skin system & optimization" },
-    { "placeId": "71575927487690", "role": "Scripted the entire game" },
-    { "placeId": "78172197449896", "role": "Scripted the entire game" },
-    { "placeId": "6258962270",     "role": "First level + in-game TV videos (pre-native video support)" },
-    { "placeId": "14839350618",    "role": "Scripted the entire game (with a partner)" }
+    {
+      "placeId": "12452509832",
+      "role": "Skin system & optimization",
+      "fallback": { "name": "Getting Over it [Remastered]", "visits": 107320045, "playing": 150 }
+    },
+    {
+      "placeId": "71575927487690",
+      "role": "Scripted the entire game",
+      "fallback": { "name": "Build a Brainrot", "visits": 26293566, "playing": 3 }
+    },
+    {
+      "placeId": "78172197449896",
+      "role": "Scripted the entire game",
+      "fallback": { "name": "Project (unlisted)", "visits": 88500, "playing": 0 }
+    },
+    {
+      "placeId": "6258962270",
+      "role": "First level + in-game TV videos (pre-native video support)",
+      "fallback": { "name": "Project (unlisted)", "visits": 18300, "playing": 0 }
+    },
+    {
+      "placeId": "14839350618",
+      "role": "Scripted the entire game (with a partner)",
+      "fallback": { "name": "[👑OVER] SPIN TO WIN!", "visits": 9500, "playing": 0 }
+    }
   ]
 }
