@@ -16,7 +16,7 @@ export default async function handler(req, res) {
     const results = await Promise.all(
       (cfg.projects || []).map(p => fetchProject(p).catch(e => {
         console.error('project failed', p.placeId, e.message);
-        return null;
+        return fromFallback(p);
       }))
     );
 
@@ -39,13 +39,13 @@ export default async function handler(req, res) {
 
 async function fetchProject(p) {
   const universeId = await placeToUniverse(p.placeId);
-  if (!universeId) return null;
+  if (!universeId) return fromFallback(p);
 
   const r = await fetch(`https://games.roblox.com/v1/games?universeIds=${universeId}`);
   if (!r.ok) throw new Error(`games api ${r.status}`);
   const json = await r.json();
   const game = json.data && json.data[0];
-  if (!game) return null;
+  if (!game) return fromFallback(p);
 
   return {
     placeId:  p.placeId,
@@ -53,6 +53,19 @@ async function fetchProject(p) {
     name:     game.name,
     visits:   game.visits,
     playing:  game.playing,
+  };
+}
+
+// When live data isn't available for a project, fall back to the static
+// snapshot in projects.json. Returns null if no snapshot was provided.
+function fromFallback(p) {
+  if (!p.fallback) return null;
+  return {
+    placeId: p.placeId,
+    role:    p.role,
+    name:    p.fallback.name,
+    visits:  p.fallback.visits,
+    playing: p.fallback.playing,
   };
 }
 
