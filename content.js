@@ -235,10 +235,10 @@ print(rollLoot({
 
   /* tagColor / border use "accent" as a sentinel -> app.js swaps in var(--accent). */
   tiers: [
-    { tag: "FIXES",        title: "Basic Fixes",         price: "$20–50",  unit: "/ task",     desc: "Bug fixes, small tweaks, and single-behavior changes to existing scripts.", accent: false },
-    { tag: "SYSTEMS",      title: "Basic Systems",       price: "$30–80",  unit: "/ system",   desc: "Standalone features: shops, leaderboards, and simple gameplay loops.",      accent: false },
-    { tag: "MOST POPULAR", title: "Advanced Systems",    price: "$80–200", unit: "/ project",  desc: "Multi-part systems: matchmaking, inventory, shops, and progression.",       accent: true  },
-    { tag: "FULL GAME",    title: "Full Game Scripting", price: "$200–2K", unit: "+ by scope", desc: "End-to-end: gameplay, backend, optimization, and final polish.",             accent: false }
+    { tag: "FIXES",        title: "Basic Fixes",         price: "$30–50",  unit: "/ task",     desc: "Bug fixes, small tweaks, and single-behavior changes to existing scripts.", accent: false },
+    { tag: "SYSTEMS",      title: "Basic Systems",       price: "$50–100",  unit: "/ system",   desc: "Standalone features: shops, leaderboards, and simple gameplay loops.",      accent: false },
+    { tag: "MOST POPULAR", title: "Advanced Systems",    price: "$100–350", unit: "/ project",  desc: "Multi-part systems: matchmaking, inventory, shops, and progression.",       accent: true  },
+    { tag: "FULL GAME",    title: "Full Game Scripting", price: "$350–3K", unit: "+ by scope", desc: "End-to-end: gameplay, backend, optimization, and final polish.",             accent: false }
   ],
 
   payments: ["Robux → DevEx", "Crypto", "BuyMeACoffee", "Roblox gift cards"],
@@ -265,6 +265,8 @@ print(rollLoot({
      To override with a custom image (studios, logos):
        { ..., avatar:"assets/reviews/theirlogo.png", ... } */
   reviews: [
+    { tag: "scripted the game", stars: "★★★★★", robloxUserId: 4451648590, name: "@rruwia", role: "Owner · Hatch Squshies", quote: "Best scripter ive commissioned yet! Is super clear with communication & gets down all the details. Very friendly. Prices are super reasonable and worth it! Would recommend to everyone!", note: "Verified 5★ review" },
+    { tag: "scripted the game", stars: "★★★★★", robloxUserId: 1566576998, name: "@auvcre", role: "Owner · Hatch Squishies", quote: "Great quality work, very professional, efficient & intuitive design. He communicates extremely well, is very easy to work with, and always goes above and beyond to make sure you are 100% satisfied with the work. I highly recommend working with him and would defintely commission him again.", note: "Verified 5★ review" },
     { tag: "scripted the game", stars: "★★★★★", robloxUserId: 4261512249, name: "@monkee915", role: "Owner · Build a Brainrot", quote: "", note: "Verified 5★ review" },
     { tag: "commisioned many times", stars: "★★★★★", robloxUserId: 179090582, name: "@fxnix.", role: "Client · Not-published projects", quote: "Very nice person and scripter. Commissioned him for a RNG system and he completed it without upfront payment and the quality was amazing!", note: "Verified 5★ review" },
     { tag: "verified · rodevs", stars: "★★★★★", anon: true, name: "Anonymous client", role: "via rodevs", quote: "He is very skilled and quick, making him great to work with." },
